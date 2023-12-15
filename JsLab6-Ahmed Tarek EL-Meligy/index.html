@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <form>
+        <input type="text" name="user" id="user" placeholder="username" /><br />
+        <input
+          type="password"
+          name="pass"
+          id="pass"
+          placeholder="password"
+        /><br />
+        <button type="button" id="login">LOGIN</button><br /><br />
+        <p>Not registred? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+    <script>
+      document.getElementById("login").addEventListener("click", function () {
+        var username = document.getElementById("user").value;
+        var password = document.getElementById("pass").value;
+
+        if (username === "admin" && password === "123") {
+          window.alert("Welcome");
+          location.replace("dolist.html");
+        } else {
+          window.alert("Not Registered");
+        }
+      });
+    </script>
+  </body>
+</html>
